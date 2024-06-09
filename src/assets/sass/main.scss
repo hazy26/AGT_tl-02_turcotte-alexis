@@ -16,6 +16,7 @@
 
 body{
     background-color: #fff;
+    position: relative;
 
     main{
         background-color: var.$color-white;
@@ -479,9 +480,3 @@ body{
 .remove-scroll{
     overflow: hidden;
 }
-
-/* 
-    - medias queries
-    - nav dialog
-    - header re-apparait on scroll-up
-*/

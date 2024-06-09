@@ -20,3 +20,23 @@ multilines.forEach(highlight => {
         animationDuration: 2000});
     annotation.show();
 });
+
+
+
+const navs = document.querySelectorAll('nav');
+const menuBtn = document.querySelector('.menu-icon');
+
+navs.forEach(nav => {
+    nav.addEventListener('click', () => {
+        toggleNav();
+    });
+});
+menuBtn.addEventListener('click', () => {
+    toggleNav();
+});
+
+function toggleNav(){
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('hidden');
+    document.body.classList.toggle('remove-scroll');
+};

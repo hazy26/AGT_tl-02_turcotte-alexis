@@ -607,6 +607,21 @@ multilines.forEach((highlight)=>{
     });
     annotation.show();
 });
+const navs = document.querySelectorAll("nav");
+const menuBtn = document.querySelector(".menu-icon");
+navs.forEach((nav)=>{
+    nav.addEventListener("click", ()=>{
+        toggleNav();
+    });
+});
+menuBtn.addEventListener("click", ()=>{
+    toggleNav();
+});
+function toggleNav() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("hidden");
+    document.body.classList.toggle("remove-scroll");
+}
 
 },{"rough-notation":"cWSh6"}],"cWSh6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
