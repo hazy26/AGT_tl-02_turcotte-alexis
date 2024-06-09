@@ -1,0 +1,90 @@
+@use 'partials/variables' as var;
+
+footer{
+    background-color: var.$color-secondary;
+    color: var.$color-white;
+    display: grid;
+    gap: 2.5rem;
+    padding: 2rem 1rem;
+
+    a{
+        color: var.$color-white;
+        text-decoration: none;
+    }
+
+    ul{
+        display: grid;
+        gap: .5rem;
+
+        &.navs__container{
+            gap: 1rem;
+            
+            li{
+                border-bottom: .1rem solid var.$color-white;
+                padding: 0 0 1rem 0;
+                                
+                >a{
+                    font-size: 1.4rem;
+                    letter-spacing: .5;
+                }
+                
+                ul{
+                    display: none;
+
+                    @media screen and (min-width: 1024px) {
+                        display: grid;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact{
+        display: grid;
+        gap: .8rem;
+
+        p{
+            letter-spacing: 1;
+        }
+
+        .adress{
+            display: grid;
+            gap: .2rem;
+        }
+    }
+
+    .infolettre{
+        display: grid;
+        gap: .5rem;
+
+        p{
+            font-weight: 500;
+            letter-spacing: 1;
+        }
+
+        input{
+            border: none;
+            border-radius: .4rem;
+            box-shadow: 1px 1px 2px 0 var.$color-black;
+            height: 2rem;
+        }
+    }
+
+    .socials{
+        display: grid;
+        gap: .5rem;
+
+        .icons__container{
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(3, auto) 50%;
+            gap: .5rem;
+            justify-items: center;
+        }
+    }
+
+    .politiques{
+        display: grid;
+        gap: .5rem;
+    }
+}

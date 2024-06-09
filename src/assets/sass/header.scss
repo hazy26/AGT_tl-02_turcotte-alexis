@@ -1,0 +1,81 @@
+@use 'partials/variables' as var;
+
+header{
+    background-color: var.$color-secondary;
+    display: grid;
+    
+    .headerTop{
+        border-bottom: .14rem solid var.$color-white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: .5rem 1rem;
+
+        .headerLeft{
+            align-items: center;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .headerRight{
+            align-items: center;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            justify-items: flex-end;
+        }
+    }
+
+    .banner{
+        position: relative;
+
+        figure{
+            img{
+                border-bottom: .14rem solid var.$color-white;
+                min-height: 300px;
+                object-fit: cover;
+            }
+        }
+
+        .content{
+            align-items: center;
+            background-color: var.$color-secondary;
+            display: grid;
+            gap: .5rem;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            padding: 1rem;
+            text-align: center;
+
+            h1{
+                color: var.$color-white;
+                font-size: 2rem;
+                font-weight: 600;
+                letter-spacing: 1;
+            }
+
+            p{
+                color: var.$color-white;
+                font-weight: 400;
+                letter-spacing: .5;
+                line-height: 1.2;
+            }
+
+            .cta__container{
+                display: grid;
+                gap: 1rem;
+                padding: 1rem;
+
+                a{
+                    background-color: var.$color-white;
+                    border: .14rem solid var.$color-black;
+                    border-radius: .4rem;
+                    box-shadow: 4px 4px 0 0 var.$color-black;
+                    color: var.$color-black;
+                    letter-spacing: 1;
+                    padding: .5rem 1rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
