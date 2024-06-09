@@ -21,7 +21,6 @@ body{
         background-color: var.$color-white;
 
         h2{
-            background-color: var.$color-primary;
             color: var.$color-white;
             font-size: 1.4rem;
             font-weight: 600;
@@ -133,6 +132,17 @@ body{
                         letter-spacing: .5;
                         padding: .5rem 1.5rem;
                         text-decoration: none;
+                        transition: .3s;
+
+                        &:hover{
+                            box-shadow: 2px 2px 0 0 var.$color-black;
+                            transform: scale(.9);
+                        }
+
+                        &:active{
+                            box-shadow: 2px 2px 0 0 var.$color-black;
+                            transform: scale(.9);
+                        }
                     }
                 }
             }
@@ -220,7 +230,18 @@ body{
                     letter-spacing: .5;
                     padding: .3rem 1.2rem;
                     text-decoration: none;
+                    transition: .3s;
                     width: fit-content;
+
+                    &:hover{
+                        box-shadow: 2px 2px 0 0 var.$color-black;
+                        transform: scale(.9);
+                    }
+
+                    &:active{
+                        box-shadow: 2px 2px 0 0 var.$color-black;
+                        transform: scale(.9);
+                    }
                 }
 
                 ul{
@@ -279,8 +300,17 @@ body{
                             padding: .5rem;
                             text-align: center;
                             text-decoration: none;
+                            transition: .3s;
 
-                            
+                            &:hover{
+                                box-shadow: 2px 2px 0 0 var.$color-black;
+                                transform: scale(.9);
+                            }
+    
+                            &:active{
+                                box-shadow: 2px 2px 0 0 var.$color-black;
+                                transform: scale(.9);
+                            }
                         }
 
                         :first-child{
@@ -321,7 +351,18 @@ body{
                     letter-spacing: .5;
                     padding: .5rem 1.5rem;
                     text-decoration: none;
+                    transition: .3s;
                     width: fit-content;
+
+                    &:hover{
+                        box-shadow: 2px 2px 0 0 var.$color-black;
+                        transform: scale(.9);
+                    }
+
+                    &:active{
+                        box-shadow: 2px 2px 0 0 var.$color-black;
+                        transform: scale(.9);
+                    }
                 }
             }
         }
@@ -402,7 +443,16 @@ body{
                             letter-spacing: .5;
                             padding: .5rem 1rem;
                             text-decoration: none;
+                            transition: .3s;
                             width: fit-content;
+
+                            &:hover{
+                                transform: scale(.9);
+                            }
+    
+                            &:active{
+                                transform: scale(.9);
+                            }
                         }
                     }
                 }
@@ -429,3 +479,9 @@ body{
 .remove-scroll{
     overflow: hidden;
 }
+
+/* 
+    - medias queries
+    - nav dialog
+    - header re-apparait on scroll-up
+*/

@@ -10,6 +10,15 @@ header{
         grid-template-columns: 1fr 1fr;
         padding: .5rem 1rem;
 
+        svg{
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover{
+                transform:  rotate(-4deg) scale(.9);
+            }
+        }
+
         .headerLeft{
             align-items: center;
             display: grid;
@@ -74,6 +83,12 @@ header{
                     letter-spacing: 1;
                     padding: .5rem 1rem;
                     text-decoration: none;
+                    transition: .3s;
+
+                    &:hover{
+                        box-shadow: 2px 2px 0 0 var.$color-black;
+                        transform: scale(.95);
+                    }
                 }
             }
         }

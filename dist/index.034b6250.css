@@ -11,6 +11,15 @@ header .headerTop {
   display: grid;
 }
 
+header .headerTop svg {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+header .headerTop svg:hover {
+  transform: rotate(-4deg)scale(.9);
+}
+
 header .headerTop .headerLeft {
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -72,7 +81,13 @@ header .banner .content .cta__container a {
   border-radius: .4rem;
   padding: .5rem 1rem;
   text-decoration: none;
+  transition: all .3s;
   box-shadow: 4px 4px #393e41;
+}
+
+header .banner .content .cta__container a:hover {
+  transform: scale(.95);
+  box-shadow: 2px 2px #393e41;
 }
 
 footer {
@@ -86,6 +101,19 @@ footer {
 footer a {
   color: #f3f6cd;
   text-decoration: none;
+}
+
+footer a:hover, footer a:active {
+  text-decoration: underline;
+}
+
+footer svg {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+footer svg:hover {
+  transform: rotate(-4deg)scale(.9);
 }
 
 footer ul {
@@ -142,6 +170,7 @@ footer .infolettre p {
 }
 
 footer .infolettre input {
+  background-color: #f3f6cd;
   border: none;
   border-radius: .4rem;
   height: 2rem;
@@ -188,7 +217,6 @@ body main {
 body main h2 {
   color: #f3f6cd;
   letter-spacing: 1px;
-  background-color: #c73e1d;
   width: fit-content;
   padding: .5rem;
   font-size: 1.4rem;
@@ -293,7 +321,13 @@ body main .overflow ul li a {
   border-radius: .2rem;
   padding: .5rem 1.5rem;
   text-decoration: none;
+  transition: all .3s;
   box-shadow: 4px 4px #393e41;
+}
+
+body main .overflow ul li a:hover, body main .overflow ul li a:active {
+  transform: scale(.9);
+  box-shadow: 2px 2px #393e41;
 }
 
 body main .overflow.articles ul {
@@ -364,7 +398,13 @@ body main .overflow.apprendre > a {
   width: fit-content;
   padding: .3rem 1.2rem;
   text-decoration: none;
+  transition: all .3s;
   box-shadow: 4px 4px #393e41;
+}
+
+body main .overflow.apprendre > a:hover, body main .overflow.apprendre > a:active {
+  transform: scale(.9);
+  box-shadow: 2px 2px #393e41;
 }
 
 body main .overflow.apprendre ul {
@@ -423,6 +463,12 @@ body main .infos-banner .container .content .cta__container a {
   border-radius: .2rem;
   padding: .5rem;
   text-decoration: none;
+  transition: all .3s;
+}
+
+body main .infos-banner .container .content .cta__container a:hover, body main .infos-banner .container .content .cta__container a:active {
+  transform: scale(.9);
+  box-shadow: 2px 2px #393e41;
 }
 
 body main .infos-banner .container .content .cta__container :first-child {
@@ -460,7 +506,13 @@ body main .banner .content a {
   height: fit-content;
   padding: .5rem 1.5rem;
   text-decoration: none;
+  transition: all .3s;
   box-shadow: 4px 4px #393e41;
+}
+
+body main .banner .content a:hover, body main .banner .content a:active {
+  transform: scale(.9);
+  box-shadow: 2px 2px #393e41;
 }
 
 body main .souvenirs {
@@ -535,6 +587,11 @@ body main .enLumiere ul li section a {
   width: fit-content;
   padding: .5rem 1rem;
   text-decoration: none;
+  transition: all .3s;
+}
+
+body main .enLumiere ul li section a:hover, body main .enLumiere ul li section a:active {
+  transform: scale(.9);
 }
 
 body img {
