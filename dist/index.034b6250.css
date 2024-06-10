@@ -489,6 +489,12 @@ body main .overflow ul {
   overflow: scroll;
 }
 
+@media screen and (width >= 1024px) {
+  body main .overflow ul {
+    overflow: hidden;
+  }
+}
+
 body main .overflow ul li {
   text-align: center;
   grid-template-columns: 1fr;
@@ -825,53 +831,63 @@ body main .enLumiere {
   display: grid;
 }
 
-body main .enLumiere ul {
+body main .enLumiere .container {
+  grid-template-columns: 1fr;
   gap: 2rem;
   display: grid;
 }
 
-body main .enLumiere ul li {
+@media screen and (width >= 768px) {
+  body main .enLumiere .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+body main .enLumiere .container img {
+  object-fit: cover;
+}
+
+body main .enLumiere .container section {
+  color: #f3f6cd;
+  background-color: #393e41;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  display: flex;
+}
+
+body main .enLumiere .container section a {
+  color: #f3f6cd;
+  background-color: #1d80c7;
+  width: fit-content;
+  height: fit-content;
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+
+body main .enLumiere .container .rightSide {
   grid-template-columns: 1fr;
   display: grid;
 }
 
-body main .enLumiere ul li.safari section {
+body main .enLumiere .container .rightSide section {
   order: -1;
 }
 
-body main .enLumiere ul li figure img {
-  padding: 0;
-}
-
-body main .enLumiere ul li section {
-  color: #f3f6cd;
-  text-align: center;
-  background-color: #393e41;
-  justify-items: center;
-  gap: 1rem;
-  padding: 2rem;
+body main .enLumiere .container .leftSide {
+  grid-template-columns: 1fr;
+  gap: 2rem;
   display: grid;
 }
 
-body main .enLumiere ul li section a {
-  color: #f3f6cd;
-  letter-spacing: .5px;
-  background-color: #1d80c7;
-  border-radius: .2rem;
-  width: fit-content;
-  padding: .5rem 1rem;
-  text-decoration: none;
-  transition: all .3s;
+body main .enLumiere .container .leftSide div {
+  grid-template-columns: 1fr;
+  display: grid;
 }
 
-body main .enLumiere ul li section a:hover, body main .enLumiere ul li section a:active {
-  transform: scale(.9);
-}
-
-@media screen and (width >= 768px) {
-  body main .enLumiere ul {
-    grid-template-columns: 1fr 1fr;
-  }
+body main .enLumiere .container .leftSide div figure {
+  max-height: 280px;
 }
 
 @media screen and (width >= 1024px) {

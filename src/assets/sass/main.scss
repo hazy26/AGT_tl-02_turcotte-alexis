@@ -125,6 +125,10 @@ body{
                 overflow: scroll;
                 scrollbar-width: none;
 
+                @media screen and (min-width:1024px) {
+                    overflow: hidden;
+                }
+
                 li{
                     align-items: center;
                     display: grid;
@@ -490,58 +494,60 @@ body{
             gap: 2rem;
             padding: 3rem 1rem;
 
-            ul{
+            .container{
                 display: grid;
                 gap: 2rem;
+                grid-template-columns: 1fr;
 
-                li{
-                    display: grid;
-                    grid-template-columns: 1fr;
+                @media screen and (min-width: 768px) {
+                    grid-template-columns: 1fr 1fr;
+                }
 
-                    &.safari{
-                        section{
-                            order: -1;
-                        }
-                    }
+                img{
+                    object-fit: cover;
+                }
+                
+                section{
+                    background-color: var.$color-black;
+                    color: var.$color-white;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    justify-content: center;
+                    padding: 2rem;
 
-                    figure{
-                        img{
-                            padding: 0;
-                        }
-                    }
-
-                    section{
-                        background-color: var.$color-black;
+                    a{
+                        background-color: var.$color-secondary;
                         color: var.$color-white;
-                        display: grid;
-                        gap: 1rem;
-                        justify-items: center;
-                        padding: 2rem;
-                        text-align: center;
-
-                        a{
-                            background-color: var.$color-secondary;
-                            border-radius: .2rem;
-                            color: var.$color-white;
-                            letter-spacing: .5;
-                            padding: .5rem 1rem;
-                            text-decoration: none;
-                            transition: .3s;
-                            width: fit-content;
-
-                            &:hover{
-                                transform: scale(.9);
-                            }
-    
-                            &:active{
-                                transform: scale(.9);
-                            }
-                        }
+                        height: fit-content;
+                        padding: .5rem 1rem;
+                        text-decoration: none;
+                        width: fit-content;
                     }
                 }
 
-                @media screen and (min-width:768px) {
-                    grid-template-columns: 1fr 1fr;
+                .rightSide{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    
+                    section{
+                        order: -1;
+                    }
+                }
+
+                .leftSide{
+                    display: grid;
+                    gap: 2rem;
+                    grid-template-columns: 1fr;
+
+                    div{
+                        display: grid;
+                        grid-template-columns: 1fr;
+
+                        figure{
+                            max-height: 280px;
+                        }
+                    }
                 }
             }
         }
