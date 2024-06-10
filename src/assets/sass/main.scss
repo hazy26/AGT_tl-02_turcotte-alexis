@@ -150,7 +150,7 @@ body{
                             width: 320px;
 
                             img{
-                                height: 360px;
+                                height: 300px;
                             }
                         }
 
@@ -289,7 +289,7 @@ body{
                 }
 
                 ul{
-                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
                 }
             }
         }
@@ -302,7 +302,7 @@ body{
 
             .container{
                 background-color: #fff;
-                border-radius: .4rem;
+                border-radius: 2rem;
                 display: grid;
                 gap: 1rem;
                 grid-template-columns: 1fr 3fr;
@@ -546,10 +546,10 @@ body{
             }
         }
 
-            @media screen and (min-width:1024px) {
-                padding: 3rem 6rem;
-            }
+        @media screen and (min-width:1024px) {
+            padding: 3rem 6rem;
         }
+    }
 
         img{
             height: 100%;

@@ -194,9 +194,17 @@ header .banner .content .cta__container a:hover {
 footer {
   color: #f3f6cd;
   background-color: #1d80c7;
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   padding: 2rem 1rem;
   display: grid;
+}
+
+@media screen and (width >= 1024px) {
+  footer {
+    gap: 6rem;
+    padding: 3rem 6rem;
+  }
 }
 
 footer a {
@@ -246,53 +254,111 @@ footer ul.navs__container li ul {
   }
 }
 
-footer .contact {
+footer .footerTopRow {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  display: grid;
+}
+
+@media screen and (width >= 1024px) {
+  footer .footerTopRow {
+    grid-template-columns: 20% 50% 30%;
+    gap: 4rem;
+  }
+
+  footer .footerTopRow .navs__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+
+  footer .footerTopRow .navs__container li {
+    border: none;
+    flex-direction: column;
+    gap: 2rem;
+    display: flex;
+  }
+
+  footer .footerTopRow .navs__container li a {
+    font-weight: 700;
+  }
+
+  footer .footerTopRow .navs__container li ul li a {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+footer .footerTopRow .infos {
+  flex-direction: column;
+  gap: 4rem;
+  display: flex;
+}
+
+footer .footerTopRow .contact {
   gap: .8rem;
   display: grid;
 }
 
-footer .contact p {
+footer .footerTopRow .contact p {
   letter-spacing: 1px;
 }
 
-footer .contact .adress {
+footer .footerTopRow .contact .adress {
   gap: .2rem;
   display: grid;
 }
 
-footer .infolettre {
+footer .footerMiddleRow {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  display: grid;
+}
+
+@media screen and (width >= 1024px) {
+  footer .footerMiddleRow {
+    grid-template-columns: 76% 34%;
+  }
+}
+
+footer .footerMiddleRow .infolettre {
   gap: .5rem;
   display: grid;
 }
 
-footer .infolettre p {
+footer .footerMiddleRow .infolettre p {
   letter-spacing: 1px;
   font-weight: 500;
 }
 
-footer .infolettre input {
+footer .footerMiddleRow .infolettre input {
   background-color: #f3f6cd;
   border: none;
   border-radius: .4rem;
+  max-width: 320px;
   height: 2rem;
-  box-shadow: 1px 1px 2px #393e41;
 }
 
-footer .socials {
-  gap: .5rem;
+footer .footerMiddleRow .socials {
+  gap: 1rem;
   display: grid;
 }
 
-footer .socials .icons__container {
-  grid-template-columns: repeat(3, auto) 50%;
-  place-items: center;
-  gap: .5rem;
-  display: grid;
+footer .footerMiddleRow .socials .icons__container {
+  align-items: center;
+  gap: 3rem;
+  display: flex;
 }
 
 footer .politiques {
-  gap: .5rem;
-  display: grid;
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+}
+
+@media screen and (width >= 1024px) {
+  footer .politiques {
+    flex-direction: row;
+  }
 }
 
 * {
@@ -451,7 +517,7 @@ body main .overflow ul li figure img {
   }
 
   body main .overflow ul li figure img {
-    height: 360px;
+    height: 300px;
   }
 }
 
@@ -564,7 +630,7 @@ body main .overflow.apprendre > a:hover, body main .overflow.apprendre > a:activ
 }
 
 body main .overflow.apprendre ul {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 body main .infos-banner {
@@ -576,7 +642,7 @@ body main .infos-banner {
 
 body main .infos-banner .container {
   background-color: #fff;
-  border-radius: .4rem;
+  border-radius: 2rem;
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
   padding: 1rem;
