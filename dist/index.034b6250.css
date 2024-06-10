@@ -1,14 +1,15 @@
 @import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap";
 header {
-  background-color: #1d80c7;
   display: grid;
 }
 
 header .headerTop {
+  background-color: #1d80c7;
   border-bottom: .14rem solid #f3f6cd;
-  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
   padding: .5rem 1rem;
-  display: grid;
+  display: flex;
 }
 
 header .headerTop svg {
@@ -21,10 +22,15 @@ header .headerTop svg:hover {
 }
 
 header .headerTop .headerLeft {
-  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 1rem;
-  display: grid;
+  gap: 2rem;
+  display: flex;
+}
+
+@media screen and (width >= 1024px) {
+  header .headerTop .headerLeft .menu-icon {
+    display: none;
+  }
 }
 
 header .headerTop .headerLeft nav {
@@ -32,7 +38,7 @@ header .headerTop .headerLeft nav {
   background-color: #0009;
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -52,6 +58,7 @@ header .headerTop .headerLeft nav ul li a {
   color: #f3f6cd;
   letter-spacing: 1px;
   background-color: #1d80c7;
+  height: fit-content;
   padding: 2rem 1rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -63,30 +70,67 @@ header .headerTop .headerLeft nav ul li a:hover {
   background-color: #c73e1d;
 }
 
+@media screen and (width >= 1024px) {
+  header .headerTop .headerLeft nav {
+    background-color: #0000;
+    grid-template-columns: 1fr;
+    display: grid;
+    position: relative;
+  }
+
+  header .headerTop .headerLeft nav ul {
+    gap: 2rem;
+    display: flex;
+  }
+
+  header .headerTop .headerLeft nav ul li {
+    border: none;
+  }
+
+  header .headerTop .headerLeft nav ul li a {
+    padding: 0;
+    font-weight: 400;
+  }
+}
+
 header .headerTop .headerRight {
-  grid-template-columns: 3fr 1fr;
-  place-items: center flex-end;
-  display: grid;
+  gap: 1rem;
+  display: flex;
+}
+
+@media screen and (width >= 1024px) {
+  header .headerTop {
+    padding: 1rem 2rem;
+  }
 }
 
 header .banner {
+  grid-template-columns: 1fr;
+  justify-self: center;
+  width: 100%;
+  max-width: 1600px;
+  display: grid;
   position: relative;
+}
+
+header .banner figure {
+  max-height: 600px;
 }
 
 header .banner figure img {
   object-fit: cover;
-  border-bottom: .14rem solid #f3f6cd;
+  height: 100%;
   min-height: 300px;
 }
 
 header .banner .content {
   text-align: center;
   background-color: #1d80c7;
-  grid-template-columns: 1fr;
-  place-items: center;
-  gap: .5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   padding: 1rem;
-  display: grid;
+  display: flex;
 }
 
 header .banner .content h1 {
@@ -99,11 +143,14 @@ header .banner .content h1 {
 header .banner .content p {
   color: #f3f6cd;
   letter-spacing: .5px;
+  text-align: right;
+  max-width: 300px;
   font-weight: 400;
   line-height: 1.2;
 }
 
 header .banner .content .cta__container {
+  grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
   display: grid;
@@ -124,6 +171,24 @@ header .banner .content .cta__container a {
 header .banner .content .cta__container a:hover {
   transform: scale(.95);
   box-shadow: 2px 2px #393e41;
+}
+
+@media screen and (width >= 1024px) {
+  header .banner .content .cta__container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header .banner .content {
+    background-color: #1d80c780;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+    height: 100%;
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 footer {
@@ -244,18 +309,21 @@ footer .politiques {
 
 body {
   background-color: #fff;
+  grid-template-columns: 1fr;
+  display: grid;
   position: relative;
 }
 
 body main {
   background-color: #f3f6cd;
+  place-self: center;
+  max-width: 1600px;
 }
 
 body main h2 {
   color: #f3f6cd;
   letter-spacing: 1px;
   width: fit-content;
-  padding: .5rem;
   font-size: 1.4rem;
   font-weight: 600;
 }
@@ -299,20 +367,53 @@ body main .categories a figure {
 
 body main .categories a figure img {
   object-fit: cover;
-  border-radius: .2rem;
+  border-radius: .4rem;
   width: 75px;
   height: 75px;
+}
+
+@media screen and (width >= 768px) {
+  body main .categories a figure img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  body main .categories a figure img {
+    width: 100%;
+    height: 140px;
+  }
 }
 
 body main .categories a figure figcaption {
   font-size: .8rem;
 }
 
+@media screen and (width >= 1024px) {
+  body main .categories a figure figcaption {
+    font-size: 1.1rem;
+  }
+
+  body main .categories {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+    padding: 6rem;
+  }
+}
+
 body main .overflow {
   grid-template-columns: 1fr;
   gap: 2rem;
+  width: 100%;
   padding: 3rem 1rem;
   display: grid;
+}
+
+@media screen and (width >= 1024px) {
+  body main .overflow {
+    padding: 3rem 6rem;
+  }
 }
 
 body main .overflow ul {
@@ -327,6 +428,7 @@ body main .overflow ul li {
   grid-template-columns: 1fr;
   place-items: center;
   gap: .5rem;
+  width: 100%;
   padding: .5rem;
   display: grid;
 }
@@ -343,8 +445,25 @@ body main .overflow ul li figure img {
   box-shadow: 1px 1px 4px #393e41;
 }
 
+@media screen and (width >= 768px) {
+  body main .overflow ul li figure {
+    width: 320px;
+  }
+
+  body main .overflow ul li figure img {
+    height: 360px;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  body main .overflow ul li figure {
+    width: 100%;
+  }
+}
+
 body main .overflow ul li p {
   letter-spacing: .5px;
+  max-width: 300px;
   padding-bottom: 1rem;
   font-size: 1rem;
   font-weight: 300;
@@ -464,11 +583,22 @@ body main .infos-banner .container {
   display: grid;
 }
 
+body main .infos-banner .container figure {
+  justify-self: center;
+}
+
 body main .infos-banner .container figure img {
   object-fit: cover;
   border-radius: 100%;
   width: 75px;
   height: 75px;
+}
+
+@media screen and (width >= 768px) {
+  body main .infos-banner .container figure img {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 body main .infos-banner .container .content {
@@ -486,9 +616,16 @@ body main .infos-banner .container .content p {
 }
 
 body main .infos-banner .container .content .cta__container {
+  flex-direction: column;
   gap: 1rem;
   padding-top: 1rem;
-  display: grid;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  body main .infos-banner .container .content .cta__container {
+    flex-direction: row;
+  }
 }
 
 body main .infos-banner .container .content .cta__container a {
@@ -498,6 +635,7 @@ body main .infos-banner .container .content .cta__container a {
   background-color: #f3f6cd;
   border: .14rem solid #393e41;
   border-radius: .2rem;
+  height: fit-content;
   padding: .5rem;
   text-decoration: none;
   transition: all .3s;
@@ -514,7 +652,17 @@ body main .infos-banner .container .content .cta__container :first-child {
 }
 
 body main .banner {
+  max-height: 540px;
   position: relative;
+}
+
+body main .banner figure {
+  max-height: 540px;
+}
+
+body main .banner figure img {
+  object-fit: cover;
+  max-height: 540px;
 }
 
 body main .banner .content {
@@ -523,7 +671,8 @@ body main .banner .content {
   text-align: center;
   background-color: #0006;
   place-items: center;
-  height: 99%;
+  width: 100%;
+  height: 100%;
   padding: 2rem;
   font-weight: 500;
   display: grid;
@@ -532,11 +681,21 @@ body main .banner .content {
   left: 0;
 }
 
+body main .banner .content p {
+  max-width: 440px;
+}
+
+@media screen and (width >= 1024px) {
+  body main .banner .content p {
+    font-size: 1.4rem;
+  }
+}
+
 body main .banner .content a {
   color: #f3f6cd;
   letter-spacing: .5px;
   background-color: #1d80c7;
-  border: .14rem solid #393e41;
+  border: .14rem solid #f3f6cd;
   border-radius: .2rem;
   align-self: flex-start;
   width: fit-content;
@@ -544,7 +703,7 @@ body main .banner .content a {
   padding: .5rem 1.5rem;
   text-decoration: none;
   transition: all .3s;
-  box-shadow: 4px 4px #393e41;
+  box-shadow: 4px 4px #f3f6cd;
 }
 
 body main .banner .content a:hover, body main .banner .content a:active {
@@ -572,6 +731,12 @@ body main .souvenirs ul {
   display: grid;
 }
 
+@media screen and (width >= 1024px) {
+  body main .souvenirs ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 body main .souvenirs ul li {
   color: #f3f6cd;
   background-color: #1d80c7;
@@ -580,6 +745,12 @@ body main .souvenirs ul li {
 
 body main .souvenirs ul li h3, body main .souvenirs ul li span {
   padding: 1rem;
+}
+
+@media screen and (width >= 1024px) {
+  body main .souvenirs {
+    padding: 3rem 6rem;
+  }
 }
 
 body main .enLumiere {
@@ -631,6 +802,18 @@ body main .enLumiere ul li section a:hover, body main .enLumiere ul li section a
   transform: scale(.9);
 }
 
+@media screen and (width >= 768px) {
+  body main .enLumiere ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  body main {
+    padding: 3rem 6rem;
+  }
+}
+
 body img {
   width: 100%;
   max-width: 100%;
@@ -644,9 +827,5 @@ body ul {
 
 body .hidden {
   display: none;
-}
-
-.remove-scroll {
-  overflow: hidden;
 }
 /*# sourceMappingURL=index.034b6250.css.map */

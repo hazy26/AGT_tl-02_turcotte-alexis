@@ -620,7 +620,6 @@ menuBtn.addEventListener("click", ()=>{
 function toggleNav() {
     const nav = document.querySelector("nav");
     nav.classList.toggle("hidden");
-    document.body.classList.toggle("remove-scroll");
 }
 
 },{"rough-notation":"cWSh6"}],"cWSh6":[function(require,module,exports) {
